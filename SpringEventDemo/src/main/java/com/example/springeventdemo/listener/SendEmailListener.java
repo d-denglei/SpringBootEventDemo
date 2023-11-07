@@ -17,6 +17,7 @@ public class SendEmailListener {
 
   @Autowired private SendEmailService sendEmailService;
 
+  // 可以用@EventListener 也可以通过实现接口
   @EventListener
   public void onApplicationEvent(SendEmailEvent sendEmailEvent) {
     EmailDTO emailDTO = sendEmailEvent.getEmailDTO();
